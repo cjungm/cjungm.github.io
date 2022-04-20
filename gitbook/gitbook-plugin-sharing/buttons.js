@@ -5,7 +5,8 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-facebook',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('http://www.facebook.com/sharer/sharer.php?s=100&p[url]='+encodeURIComponent(location.href));
+                window.alert("J.M's Facebook is Not ready");
+                // window.open('http://www.facebook.com/sharer/sharer.php?s=100&p[url]='+encodeURIComponent(location.href));
             }
         },
         'twitter': {
@@ -13,7 +14,8 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-twitter',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('http://twitter.com/home?status='+encodeURIComponent(document.title+' '+location.href));
+                window.alert("J.M's Twitter is Not ready");
+                // window.open('http://twitter.com/home?status='+encodeURIComponent(document.title+' '+location.href));
             }
         },
         'google': {
@@ -21,7 +23,8 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-google-plus',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('https://plus.google.com/share?url='+encodeURIComponent(location.href));
+                window.alert("J.M's Google is Not ready");
+                // window.open('https://plus.google.com/share?url='+encodeURIComponent(location.href));
             }
         },
         'weibo': {
@@ -29,7 +32,8 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-weibo',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('http://service.weibo.com/share/share.php?content=utf-8&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title));
+                window.alert("J.M's Weibo is Not ready");
+                // window.open('http://service.weibo.com/share/share.php?content=utf-8&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title));
             }
         },
         'instapaper': {
@@ -37,7 +41,8 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-instapaper',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('http://www.instapaper.com/text?u='+encodeURIComponent(location.href));
+                window.alert("J.M's Instapaper is Not ready");
+                // window.open('http://www.instapaper.com/text?u='+encodeURIComponent(location.href));
             }
         },
         'vk': {
