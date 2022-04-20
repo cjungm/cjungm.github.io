@@ -1,54 +1,62 @@
-# Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
-description: >
-  Build Jekyll site with the GitBook style.
+# Site settings
+title: A.P
+baseurl: "/ap"
+url: "https://kssim.github.io"
+google_analytics: # Tracking ID, e.g. "UA-000000-01"
 
-version:          1.0
-gitbook_version:  3.2.3
+# Author
+author:
+  name: KyeongSeob Sim
+  desc: Hello nice to meet you
+  email: ksub0912@gmail.com
+  selfie: assets/img/profile.jpg
 
-url:              'https://cjungm.github.io'
-baseurl:          ''
-rss:              RSS
+# social
+social:
+  email: true
+  behance:
+  bitbucket:
+  dribbble:
+  facebook: Test
+  flickr:
+  github: kssim
+  google_plus:
+  instagram:
+  keybase:
+  linkedin: https://www.linkedin.com/in/kssim/ 
+  pinterest:
+  reddit:
+  soundcloud:
+  stack_exchange:
+  steam:
+  tumblr:
+  gitlab:
+  twitter: Test
+  vimeo:
+  wordpress:
+  youtube:
+  default_txt: "Follow On"
 
-toc:
-  enabled: true
-  h_min: 1
-  h_max: 3
+# Build settings
+markdown: kramdown
 
-# markdown render engine.
-markdown:         kramdown
-kramdown:
-  auto_ids:               true
-  input:                  GFM
-  math_engine:            mathjax
-  smart_quotes:           lsquo,rsquo,ldquo,rdquo
-  toc_levels:             1..6
-  syntax_highlighter:     rouge
-  syntax_highlighter_opts:
-    guess_lang:           true
+# Assets
+sass:
+  sass_dir: _sass
+  style: compressed
 
-syntax_highlighter_style: colorful
-
-markdown_ext:     markdown,mkdown,mkdn,mkd,md
+# Gems
+plugins:
+  - jekyll-paginate
 
 # Permalinks
-permalink:        /:categories/:year-:month-:day-:title:output_ext
-
+permalink: /:year-:month-:day/:title
+paginate_path: "/portfolio/page:num/"
+paginate: 5
 exclude:
-  - _drafts
-
-collections:
-  pages:
-    output: true
-    permalink: /:collection/:path/
-
-destination:      ./_site
-incremental:      false
-regenerate:       true
-
-plugins:
-  - jekyll-feed
-  - jemoji
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "*.gem"
+  - "LICENSE"
+  - "READE.md"
+  - "screenshot.png"

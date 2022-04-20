@@ -1,112 +1,128 @@
-# Jekyll GitBook
+# AP  [![Build Status](https://travis-ci.org/kssim/ap.svg?branch=master)](https://travis-ci.org/kssim/ap.svg?branch=master)
+"AP" is [Jekyll](https://jekyllrb.com/) theme for career. This theme is free and open-source.  
+Based on Chester How's tale-theme(https://github.com/chesterhow/tale) with a few new features:  
+* SNS Link
+* Google Analytics
+* Responsive design
+* Upgrading awesome fonts and modifying some layouts.
+* Use "About" as main.
+  * It can be written in simple resume form.
+* Change "Post" to "Project Portfolio"
+  * You can manage your project experience just like running a blog.
 
-Make Jelly site have a GitBook look!
 
-## Demo
+# Preview
+[![AP Screenshot](https://github.com/kssim/ap/blob/master/screenshot.png?raw=true)](https://kssim.github.io/ap/)
 
-Live demo on Github Pages: [https://sighingnow.github.io/jekyll-gitbook](https://sighingnow.github.io/jekyll-gitbook)
 
-[![Jekyll Themes](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://jekyll-themes.com/jekyll-gitbook/)
+# Usage
+1. Fork and clone the AP repo:
+    * git clone https://github.com/kssim/ap.git
+2. Install Jekyll:
+    * gem install jekyll
+3. Install the theme's dependencies
+    * bundle install
+4. Customize the theme
+    * update _config.yml
+5. Run the Jekyll server
+    * jekyll serve
 
-## Why Jekyll with GitBook
 
-GitBook is an amazing frontend style to present and organize contents (such as book chapters
-and blogs) on Web. The typical to deploy GitBook at [Github Pages][1]
-is building HTML files locally and then push to Github repository, usually to the `gh-pages`
-branch. It's quite annoying to repeat such workload and make it hard for people do version
-control via git for when there are generated HTML files to be staged in and out.
-
-This theme takes style definition out of generated GitBook site and provided the template
-for Jekyll to rendering markdown documents to HTML, thus the whole site can be deployed
-to [Github Pages][1] without generating and uploading HTML bundle every time when there are
-changes to the original repo.
-
-## How to Get Started
-
-This theme can be used just as other [Jekyll themes][1].
-
-[Fork][3] this repository and add your markdown posts to the `_posts` folder.
-
-### Deploy Locally with Jekyll Serve
-
-This theme can be ran locally using Ruby and Gemfiles.
-
-[Testing your GitHub Pages site locally with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) - GitHub
-
-## Full-text search
-
-The search functionality in jekyll-gitbook theme is powered by the [gitbook-plugin-search-pro][5] plugin and is enabled by default.
-
-[https://sighingnow.github.io/jekyll-gitbook/?q=generated](https://sighingnow.github.io/jekyll-gitbook/?q=generated)
-
-## Code highlight
-
-The code highlight style is configurable the following entry in `_config.yaml`:
-
-```yaml
-syntax_highlighter_style: colorful
+## Structure
+* Here are the main files of the template
+```bash
+ap
+├── _includes                  # theme includes
+├── _layouts                   # theme layouts (see below for details)
+├── _posts                     # Project & Portfolio posts
+├── _sass                      # Sass partials 
+├── portfolio                  # Main page for "portfolio"
+├── assets
+|  ├── css                     # font-awesome and main css
+|  ├── fonts                   # Font-Awesome
+|  ├── favicon.ico             # Favicon
+|  └── img                     # Images used for "about" page
+├── _config.yml                # sample configuration
+└── index.md                   # Resume to show on "about" page
 ```
 
-The default code highlight style is `colorful`, the full supported styles can be found from [the rouge repository][6]. Customized
-style can be added to [./gitbook/rouge/](./gitbook/rouge/).
+## Configure AP
+Open _config.yml in a text editor to change most of the blog's settings.
 
-## How to generate TOC
 
-The jekyll-gitbook theme leverages [jekyll-toc][4] to generate the *Contents* for the page.
-The TOC feature is not enabled by default. To use the TOC feature, modify the TOC
-configuration in `_config.yml`:
+### Site Configuration
+Configure Jekyll as your own blog or with a subpath in in _config.yml:  
+```yml
+title: [Website Title]
+baseurl: [Website Subpath]
+url: [Github Page Url]
+google_analytics: [Google Analytics Tracking ID]
+```
+Please configure this before using the theme.  
+And to enable Google Analytics, add your [Traking ID](https://support.google.com/analytics/answer/1008080?visit_id=1-636579797402349951-2693679291&rd=1)
 
-```yaml
-toc:
-    enabled: true
-    h_min: 1
-    h_max: 3
+
+
+### About You
+Meta variables hold basic information about your profile and resume.  
+Change these variables in _config.yml:  
+```yml
+author:
+  name: [Your Name]
+  desc: [Short introduction]
+  email: [Your E-Mail Address]
+  selfie: [Your Avatar]
+```
+Please configure this before using the theme.
+
+
+
+### SNS Information
+Your SNS information to display at the bottom of the page.  
+All values except "email" are text values.  
+```yml
+social:
+  email: true
+  behance:
+  bitbucket:
+  dribbble:
+  facebook:
+  flickr:
+  github: 
+  google_plus:
+  instagram:
+  keybase:
+  linkedin:
+  pinterest:
+  reddit:
+  soundcloud:
+  stack_exchange:
+  steam:
+  tumblr:
+  gitlab:
+  twitter: 
+  vimeo:
+  wordpress:
+  youtube:
+  default_txt: "Follow On"
 ```
 
-## Google Analytics, etc.
 
-The jekyll-gitboook theme supports embedding the [Google Analytics][7], [CNZZ][8] and [Application Insights][9] website analytical tools with the following
-minimal configuration in `_config.yaml`:
-
-```yaml
-tracker:
-  google_analytics: "<YOUR GOOGLE ANALYTICS KEY, e.g, UA-xxxxxx-x>"
+## Portfolio Schema
+```markdown
+---
+layout: post
+title:  [Project title to show in portfolio list]
+info: [A brief introduction to show in portfolio list]
+tech: [The technologies used in the project to show in portfolio list]
+type: [Property of the project to be displayed in front of the project's info(toy or company name)]
+---
 ```
 
-Similarly, CNZZ can be added with the following configuration in `_config.yaml`
+## Other formats
+It uses the markdown syntax by default, and there is no format other than the one mentioned above.  
+You can use it as you like.  
 
-```yaml
-tracker:
-  cnzz: "<YOUR CNZZ ANALYTICS KEY, e.g., xxxxxxxx>"
-```
-
-Application Insights can be added with the following configuration in `_config.yaml`
-
-```yaml
-tracker:
-  application_insights: "<YOUR APPLICATION INSIGHTS CONNECTION STRING>"
-```
-
-## Extra StyleSheet or Javascript elements
-
-You can add extra CSS or JavaScript references using configuration collections:
-
-- extra_css: for additional style sheets. If the url does not start by http, the path must be relative to the root of the site, without a starting `/`.
-- extra_header_js: for additional scripts to be included in the `<head>` tag, after the `extra_css` has been added. If the url does not start by http, the path must be relative to the root of the site, without a starting `/`.
-- extra_footer_js: for additional scripts to be included at the end of the HTML document, just before the site tracking script. If the url does not start by http, the path must be relative to the root of the site, without a starting `/`.
 
 ## License
-
-This work is open sourced under the Apache License, Version 2.0.
-
-Copyright 2019 Tao He.
-
-[1]: https://pages.github.com
-[2]: https://pages.github.com/themes
-[3]: https://github.com/sighingnow/jekyll-gitbook/fork
-[4]: https://github.com/allejo/jekyll-toc
-[5]: https://github.com/gitbook-plugins/gitbook-plugin-search-pro
-[6]: https://github.com/rouge-ruby/rouge/tree/master/lib/rouge/themes
-[7]: https://analytics.google.com/analytics/web/
-[8]: https://www.cnzz.com/
-[9]: https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview
+[The MIT License (MIT)](https://raw.githubusercontent.com/kssim/ap/master/LICENSE)
