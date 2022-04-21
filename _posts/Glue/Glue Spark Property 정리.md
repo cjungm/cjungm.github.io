@@ -1,3 +1,12 @@
+---
+title: Glue Spark Property 정리
+author: J.M
+date: 2020-04-21
+category: Glue
+layout: post
+
+---
+
 # Glue Spark Property 정리
 
 Worker 수 1을 기준으로 Worker Type별 수치
