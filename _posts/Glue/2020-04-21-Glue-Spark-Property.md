@@ -47,13 +47,13 @@ Glue Spark UI
 
 - v 2.0 (App name 과 달리 2.0이 맞습니다.)
 
-  ![v_2.0_core](Glue/Images/v_2.0_core.png)
+  ![v_2.0_core](Images/v_2.0_core.png)
 
   > spark.default.parallelism = Core 수  *  **Worker 수**
 
 - v 3.0
 
-  ![v_3.0_core](Glue/Images/v_3.0_core.png)
+  ![v_3.0_core](Images/v_3.0_core.png)
 
   > spark.default.parallelism = Core 수  *  **Executor 수**
 
