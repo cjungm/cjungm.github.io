@@ -8,6 +8,6 @@ layout: post
 
 This is an contact page.
 
-- **Email** | **[candy7manner@gmail.com](mailto:candy7manner@gmail.com)**
-- **Mobile | 010-xxxx-xxxx**
-- **Github | https://github.com/cjungm**
+- **Email** : **[candy7manner@gmail.com](mailto:candy7manner@gmail.com)**
+- **Mobile** : **010-xxxx-xxxx**
+- **Github** : **https://github.com/cjungm**
