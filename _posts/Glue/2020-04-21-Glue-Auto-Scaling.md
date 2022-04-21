@@ -121,7 +121,7 @@ Check_List :
 DAG :
 
 - v2.0
-  <img src="Images/v_2.0_dag.png" alt="glue version 2.0 dag"/>
+  <img src="Images/v-2-0-dag.png" alt="glue version 2.0 dag"/>
 - v3.0
   
   <img src="Images/v_3.0_dag.png" alt="glue version 3.0 dag"/>
