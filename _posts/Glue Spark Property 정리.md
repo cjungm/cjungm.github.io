@@ -53,7 +53,7 @@ Glue Spark UI
 
 - v 3.0
 
-  ![v_3.0_core](Images/v_3.0_core.png)
+  ![v_3.0_core](Glue/Images/v_3.0_core.png)
 
   > spark.default.parallelism = Core 수  *  **Executor 수**
 
