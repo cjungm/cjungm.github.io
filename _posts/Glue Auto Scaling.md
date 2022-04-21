@@ -2,7 +2,7 @@
 title: Glue Auto Scaling
 author: J.M
 date: 2020-04-21
-category: Glue
+category: Jekyll
 layout: post
 
 ---
