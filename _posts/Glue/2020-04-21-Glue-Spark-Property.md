@@ -7,8 +7,6 @@ layout: post
 
 ---
 
-# Glue Spark Property 정리
-
 Worker 수 1을 기준으로 Worker Type별 수치
 
 - Standard
