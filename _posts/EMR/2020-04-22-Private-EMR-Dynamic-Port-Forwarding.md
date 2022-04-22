@@ -80,6 +80,8 @@ EMR Master Security Group
    ![FoxyProxy_Install](../../Images/EMR/FoxyProxy_Install.png)
 
 2. Proxy xml 정의(EMR 기준)
+   [XML 파일](../../Code/EMR/foxyproxy.xml)
+   
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <foxyproxy>
@@ -99,7 +101,7 @@ EMR Master Security Group
        </proxies>
    </foxyproxy>
    ```
-
+   
 3. XML import
 
    - ![FoxyProxy_Options](../../Images/EMR/FoxyProxy_Options.png)
