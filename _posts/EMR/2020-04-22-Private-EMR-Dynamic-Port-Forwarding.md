@@ -74,7 +74,7 @@ EMR Master Security Group
 4. 인증 설정 (Pem, PPK)
    ![MobaXterm_Auth_Tunneling](../../Images/EMR/MobaXterm_Auth_Tunneling.png)
 
-### FoxyProxy
+## FoxyProxy
 
 1. Chrome Extension 설치
    ![FoxyProxy_Install](../../Images/EMR/FoxyProxy_Install.png)
