@@ -38,6 +38,7 @@ Write an **efficient** algorithm for the following assumptions:
 나의 답 : 
 
 ```python
+# 주어진 수 N의 약수 집합에서 가장 낮은 짝의 합을 구하시오
 def solution(N):
 
     divisorsList = []
@@ -48,8 +49,6 @@ def solution(N):
                 divisorsList.append((i + N // i) * 2)
             else:
                 divisorsList.append((i + i) * 2)
-    print(divisorsList)
-
     
     return min(divisorsList)
 ```

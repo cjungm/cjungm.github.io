@@ -29,6 +29,8 @@ Write an **efficient** algorithm for the following assumptions:
 나의 답 : 
 
 ```python
+# 주어진 수 N의 약수의 갯수를 구하시오
+# 전체 리스트 순회
 # try 1
 
 def solution(N):
@@ -43,6 +45,8 @@ def solution(N):
 ```
 
 ```python
+# N의 약수의 짝 중 작은 수는 N의 제곱근을 넘지 않는다.
+# 따라서 N의 제곱근까지만 순회합니다.
 # try 2
 
 def solution(N):
