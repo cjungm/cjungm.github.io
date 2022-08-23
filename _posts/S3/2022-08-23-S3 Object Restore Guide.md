@@ -85,38 +85,38 @@ S3 Batch Operation 수행 방법은 IAM 생성과 Job 생성으로 나눌 수 �
 
      ```json
      {
-         "Version":"2012-10-17",
-         "Statement":[
-           {
-             "Effect":"Allow",
-             "Action":[
-                 "s3:RestoreObject"
-             ],
-             "Resource": [
-               "arn:aws:s3:::{SOURCE_BUCKET}/{PATH}/*"
-             ]
-           },
-           {
-             "Effect": "Allow",
-             "Action": [
-               "s3:GetObject",
-               "s3:GetObjectVersion"
-             ],
-             "Resource": [
-               "arn:aws:s3:::{MANIFEST_BUCKET}/{MANIFEST_PATH}/*"
-             ]
-           },
-           {
-             "Effect":"Allow",
-             "Action":[
-               "s3:PutObject"
-             ],
-             "Resource":[
-               "arn:aws:s3:::{REPORT_BUCKET}/{REPORT_PATH}/*"
-             ]
-           }
-         ]
-       }
+       "Version":"2012-10-17",
+       "Statement":[
+         {
+           "Effect":"Allow",
+           "Action":[
+               "s3:RestoreObject"
+           ],
+           "Resource": [
+             "arn:aws:s3:::{SOURCE_BUCKET}/{PATH}/*"
+           ]
+         },
+         {
+           "Effect": "Allow",
+           "Action": [
+             "s3:GetObject",
+             "s3:GetObjectVersion"
+           ],
+           "Resource": [
+             "arn:aws:s3:::{MANIFEST_BUCKET}/{MANIFEST_PATH}/*"
+           ]
+         },
+         {
+           "Effect":"Allow",
+           "Action":[
+             "s3:PutObject"
+           ],
+           "Resource":[
+             "arn:aws:s3:::{REPORT_BUCKET}/{REPORT_PATH}/*"
+           ]
+         }
+       ]
+     }
      ```
 
    - Copy Policy
