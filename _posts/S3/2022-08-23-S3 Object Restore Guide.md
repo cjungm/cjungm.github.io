@@ -1,5 +1,5 @@
 ---
-title: S3 객체 복원 가이드
+title: S3 Object Restore Guide
 author: J.M
 date: 2022-08-23
 category: S3
