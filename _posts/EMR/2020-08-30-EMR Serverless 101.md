@@ -43,9 +43,9 @@ Concurrency가 명시되어 있지 않으므로 기존 EMR EC2에서 하던 작�
 
 EMR Serverless Application에서 내부적으로 사용하는 개념. Console과 AWS CLI를 비교해볼 때 Worker란 Spark의 Driver와 Executor, Hive의 Tez_Task 등 모두를 일컫는 말이라고 유추할 수 있다.
 
-| Console                                      | AWS CLI                                                      |
-| -------------------------------------------- | ------------------------------------------------------------ |
-| ![concept_worker](Images/concept_worker.png) | aws emr-serverless create-application \<br/>  --type "SPARK" \<br/>  --name my_application_name \<br/>  --release-label emr-6.7.0 \<br/>  --initial-capacity '{<br/>    "DRIVER": {<br/>        "**workerCount**": 5,<br/>        "**workerConfiguration**": {<br/>            "cpu": "2vCPU",<br/>            "memory": "4GB"<br/>        }<br/>    },<br/>    "EXECUTOR": {<br/>        "**workerCount**": 50,<br/>        "**workerConfiguration**": {<br/>            "cpu": "4vCPU",<br/>            "memory": "8GB"<br/>        }<br/>    }<br/>  }' \<br/>  --maximum-capacity '{<br/>    "cpu": "400vCPU",<br/>    "memory": "1024GB"<br/>  }' |
+| Console                                                | AWS CLI                                                      |
+| ------------------------------------------------------ | ------------------------------------------------------------ |
+| ![concept_worker](../../Images/EMR/concept_worker.png) | aws emr-serverless create-application<br /> --type "SPARK"<br />--name my_application_name<br />--release-label emr-6.7.0<br />--initial-capacity '{<br/>    "DRIVER": {<br/>        "**workerCount**": 5,<br/>        "**workerConfiguration**": {<br/>            "cpu": "2vCPU",<br/>            "memory": "4GB"<br/>        }<br/>    },<br/>    "EXECUTOR": {<br/>        "**workerCount**": 50,<br/>        "**workerConfiguration**": {<br/>            "cpu": "4vCPU",<br/>            "memory": "8GB"<br/>        }<br/>    }<br/>  }' \<br/>  --maximum-capacity '{<br/>    "cpu": "400vCPU",<br/>    "memory": "1024GB"<br/>  }' |
 
 위의 내용처럼 빠른 워크로드 처리를 위해서는 사전 초기화 작업을 통해 Worker를 미리 구성하여 작업이 가능합니다. 
 
