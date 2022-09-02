@@ -27,7 +27,7 @@ Spark 또는 Hive Application에 대한 Configuration을 정의 하는 서비스
 
 ### 2. Job Run
 
-HiveQL 쿼리 또는 Pyspark Script 등 정의된 작업들을 비동기로 제출 및 실행하고 완료 시점까지 추척하는 서비스 입니다.
+HiveQL 쿼리 또는 Pyspark Script 등 정의된 작업들을 비동기로 제출 및 실행하고 완료 시점까지 추적하는 서비스 입니다.
 
 각 작업은 별도의 IAM으로 권한이 분리되고 작업이 제출되는 동시에 작업을 수행합니다.
 
@@ -269,9 +269,9 @@ Application setup option이 Custom인 경우 위에서 기본으로 정의 했�
 | Multi  Master Node | 지원                                                         | 관리  대상 아님                                              |
 | Glue  Catalog      | 지원                                                         | 지원                                                         |
 | Cluster  Config    | 각  Application에 대한 Configuration 지원                    | Spark,  Hive Configuration만 지원                            |
-| Network            | Uniform  Group - 1 AZ<br />Fleet Instance - Multi AZ on Lauching, 1 AZ After Launching | Multi  AZ                                                    |
+| Network            | Uniform  Group - 1 AZ<br />Fleet Instance - Multi AZ on Launching, 1 AZ After Launching | Multi  AZ                                                    |
 | Hardware           | Master,  Core, Task에 대한 별도 구성 필요                    | 자동  관리 대상                                              |
-| Auto  Scaling      | Managed,  Custom Autoscaling 지원                            | Managed  Autoscaling, PreInitializing(Pre warm) 지원         |
+| Auto  Scaling      | Managed,  Custom Autoscaling 지원                            | Managed  Autoscaling, Pre-Initializing(Pre warm) 지원        |
 | Auto  Managing     | Auto  Termination 지원 (**Stop 기능 없음**)                  | Auto  Start, Stop 기능 지원                                  |
 | Logging            | S3  지원                                                     | S3 지원                                                      |
 | AMI                | Managed,  Custom AMI 지원                                    | Managed  AMI 지원                                            |
@@ -281,27 +281,27 @@ Application setup option이 Custom인 경우 위에서 기본으로 정의 했�
 | Security  Group    | Master,  Core 별도 지원                                      | 단일  Security Group                                         |
 | Notebook           | 지원                                                         | **지원 안함**                                                |
 | 작업 제출          | Step을  통한 지원<br />기본적으로 Shell Script 지원<br />Application 별 작업 지원(Spark, Hive, Hadoop)<br />Concurrency를 통한 step별 dependency 적용 가능 | Job을  통한 지원<br />Spark, Hive Application만 지원<br />**Concurrency 지원 안함** |
-| Monitoring         | pre-signed  url (EMR에서 제공하는 바로가기)<br />Application URL (application dns) | pre-signed  url (EMR에서 제공하는 바로가기)                  |
+| Monitoring         | pre-signed  URL (EMR에서 제공하는 바로가기)<br />Application URL (application dns) | pre-signed  URL (EMR에서 제공하는 바로가기)                  |
 
 ### 2. Glue Job vs EMR Serverless
 
-| Version        | 3.0  기준(최신)                                              | 6.7  기준(최신)                                      |
-| -------------- | ------------------------------------------------------------ | ---------------------------------------------------- |
-| 서비스         | Glue                                                         | EMR  Serverless                                      |
-| 기능           |                                                              |                                                      |
-| Application    | Spark,  Hive(Glue catalog)                                   | Spark,  Hive                                         |
-| Runtime        | Python,  Pyspark, Scala                                      | Python,  Pyspark, Scala                              |
-| Glue  Catalog  | 지원                                                         | 지원                                                 |
-| Configuration  | Spark  Configuration 지원 (Code Level)                       | Spark,  Hive Configuration 지원                      |
-| Network        | Public,  Private 지원                                        | Public,  Private 지원                                |
-| Auto  Scaling  | Managed  Autoscaling 지원                                    | Managed  Autoscaling, PreInitializing(Pre warm) 지원 |
-| Logging        | CloudWatch  지원 / SparkUI log - S3 지원                     | S3 지원                                              |
-| IAM            | Job  별 IAM                                                  | Job  별 IAM                                          |
-| Notebook       | 지원                                                         | **지원 안함**                                        |
-| 작업 제출      | Glue  Job, Interactive Shell, Glue Endpoint                  | Job  Run                                             |
-| Monitoring     | Glue  Studio Monitoring, ClowdWatch 지원<br />Spark UI - **별도의 Spark UI 서버 구성 필요** | 지원                                                 |
-| Orchestration  | Glue  Workflow                                               | **지원 안함**                                        |
-| Starting  Time | 1분  내외                                                    | **5분 내외**                                         |
+| Version        | 3.0  기준(최신)                                              | 6.7  기준(최신)                                       |
+| -------------- | ------------------------------------------------------------ | ----------------------------------------------------- |
+| 서비스         | Glue                                                         | EMR  Serverless                                       |
+| 기능           |                                                              |                                                       |
+| Application    | Spark,  Hive(Glue catalog)                                   | Spark,  Hive                                          |
+| Runtime        | Python,  Pyspark, Scala                                      | Pyspark, Scala, Hive                                  |
+| Glue  Catalog  | 지원                                                         | 지원                                                  |
+| Configuration  | Spark  Configuration 지원 (Code Level)                       | Spark,  Hive Configuration 지원                       |
+| Network        | Public,  Private 지원                                        | Public,  Private 지원                                 |
+| Auto  Scaling  | Managed  Autoscaling 지원                                    | Managed  Autoscaling, Pre-Initializing(Pre warm) 지원 |
+| Logging        | CloudWatch  지원 / Spark UI log - S3 지원                    | S3 지원                                               |
+| IAM            | Job  별 IAM                                                  | Job  별 IAM                                           |
+| Notebook       | 지원                                                         | **지원 안함**                                         |
+| 작업 제출      | Glue  Job, Interactive Shell, Glue Endpoint                  | Job  Run                                              |
+| Monitoring     | Glue  Studio Monitoring, CloudWatch 지원<br />Spark UI - **별도의 Spark UI 서버 구성 필요** | 지원                                                  |
+| Orchestration  | Glue  Workflow                                               | **지원 안함**                                         |
+| Starting  Time | 1분  내외                                                    | **5분 내외**                                          |
 
 ---
 
