@@ -18,7 +18,9 @@ Architecture 구성 및 AWS Service 활용 Data 처리 기능 개발을 생활�
 
 함께 그리고 먼저 배우고, 공유하며 성장하고 싶습니다.
 
-[linkedin](www.linkedin.com/in/jungmin-choi-aa52591a6)
+## Contact & Channel
+- Email | candy7manner@gmail.com
+- SNS | [linkedin](https://www.linkedin.com/in/jungmin-choi-aa52591a6)
 
 ## 자격증
 
