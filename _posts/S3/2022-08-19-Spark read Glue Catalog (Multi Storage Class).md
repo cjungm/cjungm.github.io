@@ -208,7 +208,8 @@ Glue Table : sample-table-name
               at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
       ...
       Caused by: java.io.IOException: com.amazon.ws.emr.hadoop.fs.shaded.com.amazonaws.services.s3.model.AmazonS3Exception: 
-          The operation is not valid for the object's storage class (Service: Amazon S3; Status Code: 403; Error Code: InvalidObjectState; Request ID: 2H5QW79SR7M40GC7;
+          The operation is not valid for the object's storage class (Service: Amazon S3; Status Code: 403;
+          Error Code: InvalidObjectState; Request ID: 2H5QW79SR7M40GC7;
           S3 Extended Request ID: FVpoWPsy5J6gAGVUNlc/SfpFfBC6Awn0Etnada0nOKU5uMXE1R4Hg25DaJATrDgg3kl7MbBOAc8=;
           Proxy: null), S3 Extended Request ID: FVpoWPsy5J6gAGVUNlc/SfpFfBC6Awn0Etnada0nOKU5uMXE1R4Hg25DaJATrDgg3kl7MbBOAc8=
               at com.amazon.ws.emr.hadoop.fs.s3.S3FSInputStream.open(S3FSInputStream.java:226)
