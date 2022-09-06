@@ -15,6 +15,7 @@ S3에 존재하는 정형 데이터에 대해 Glue Catalog를 생성하고 Athen
 하지만 S3의 관리 차원에서 Life Cycle Management 를 이용하여 일정 기간 이상의 Object들에 대해서는 Storage Class를 변경하거나 삭제하기도 합니다.
 
 S3에 원본 데이터가 존재하고 이를 기반으로 Glue Table을 생성했을 때 원본 데이터의 일부가 Storage Class가 Standard가 아닌 다른 Class로 설정이 되어 있다면 
+
 Glue Catalog를 사용하는 타 Service에서는 어떻게 조회 될까요?
 
 예시 상황)

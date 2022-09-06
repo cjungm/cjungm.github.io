@@ -17,7 +17,7 @@ layout: post
 
 ### Architecture
 
-![Architecture](../../Images/EMR/Architecture.png)
+![Architecture](../../../../Images/EMR/Architecture.png)
 
 > Bastion은 MobaXterm의 Dynamic Port Forwarding을 활용하여 Localhost:8157로 접근 가능하며 해당 URI 로 접근 시 전달되는 Target URL로 Forwarding 함
 >
@@ -54,13 +54,13 @@ EMR Master Security Group
 ## MobaXterm
 
 1. MobaXterm의 Tunneling Tab 선택. Putty나 WSL로 대체 가능
-   ![MobaXterm_Tunneling_Tab](../../Images/EMR/MobaXterm_Tunneling_Tab.png)
+   ![MobaXterm_Tunneling_Tab](../../../../Images/EMR/MobaXterm_Tunneling_Tab.png)
 
 2. 신규 Tunneling 생성
-   ![MobaXterm_New_Tunneling](../../Images/EMR/MobaXterm_New_Tunneling.png)
+   ![MobaXterm_New_Tunneling](../../../../Images/EMR/MobaXterm_New_Tunneling.png)
 
 3. Tunneling 값 설정
-   ![MobaXterm_Set_Tunneling](../../Images/EMR/MobaXterm_Set_Tunneling.png)
+   ![MobaXterm_Set_Tunneling](../../../../Images/EMR/MobaXterm_Set_Tunneling.png)
 
    > - Dynamic port forwarding 선택
    > - My Computer Port는 8157
@@ -72,12 +72,12 @@ EMR Master Security Group
    >   - Bastion port (default 22)
 
 4. 인증 설정 (Pem, PPK)
-   ![MobaXterm_Auth_Tunneling](../../Images/EMR/MobaXterm_Auth_Tunneling.png)
+   ![MobaXterm_Auth_Tunneling](../../../../Images/EMR/MobaXterm_Auth_Tunneling.png)
 
 ## FoxyProxy
 
 1. Chrome Extension 설치
-   ![FoxyProxy_Install](../../Images/EMR/FoxyProxy_Install.png)
+   ![FoxyProxy_Install](../../../../Images/EMR/FoxyProxy_Install.png)
 
 2. Proxy xml 정의(EMR 기준)
    [XML 파일](https://github.com/cjungm/cjungm.github.io/blob/main/Code/EMR/foxyproxy.xml)
@@ -104,10 +104,10 @@ EMR Master Security Group
    
 3. XML import
 
-   - ![FoxyProxy_Options](../../Images/EMR/FoxyProxy_Options.png)
-   - ![FoxyProxy_Import](../../Images/EMR/FoxyProxy_Import.png)
-   - ![FoxyProxy_Enable](../../Images/EMR/FoxyProxy_Enable.png)
+   - ![FoxyProxy_Options](../../../../Images/EMR/FoxyProxy_Options.png)
+   - ![FoxyProxy_Import](../../../../Images/EMR/FoxyProxy_Import.png)
+   - ![FoxyProxy_Enable](../../../../Images/EMR/FoxyProxy_Enable.png)
 
 ## Result
 
-![Dynamic_Port_Forwarding_Result](../../Images/EMR/Dynamic_Port_Forwarding_Result.png)
+![Dynamic_Port_Forwarding_Result](../../../../Images/EMR/Dynamic_Port_Forwarding_Result.png)

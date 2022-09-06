@@ -47,7 +47,7 @@ Auto Scaling을 활성화하게 되면 Glue Job 설정시 입력한 Worker 수�
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-<img src="../../Images/Glue/spark_env.png" alt="glue spark env"/>
+<img src="../../../../Images/Glue/spark_env.png" alt="glue spark env"/>
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -121,7 +121,7 @@ Check_List :
 DAG :
 
 - v2.0
-  <img src="../../Images/Glue/v_2.0_dag.png" alt="glue version 2.0 dag"/>
+  <img src="../../../../Images/Glue/v_2.0_dag.png" alt="glue version 2.0 dag"/>
 - v3.0
   
-  <img src="../../Images/Glue/v_3.0_dag.png" alt="glue version 3.0 dag"/>
+  <img src="../../../../Images/Glue/v_3.0_dag.png" alt="glue version 3.0 dag"/>
