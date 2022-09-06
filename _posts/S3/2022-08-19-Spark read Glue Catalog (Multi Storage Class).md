@@ -151,15 +151,15 @@ Glue Table : sample-table-name
       query1 = """SELECT * FROM `sample-db-name`.`sample-table-name`"""
       spark.sql(query1).show()
       
-      +--------------+----------+--------------------+-------+--------------+-----------+----------+----+
-      |    reviewerid|      asin|        reviewername|overall|unixreviewtime| reviewtime|  date_col|year|
-      +--------------+----------+--------------------+-------+--------------+-----------+----------+----+
-      |XXXXXXXXXXXXXX|xxxxxxxxxx|             XXXXXXX|      4|    0000000000| 02 1, 2013|2013-02-01|2013|
-      |yyyyyyyyyyyyyy|yyyyyyyyyy|             yyyyyyy|      4|    0000000000|03 30, 2013|2013-03-30|2013|
-      |zzzzzzzzzzzzzz|zzzzzzzzzz|             zzzzzzz|      4|    0000000000|05 12, 2013|2013-05-12|2013|
-      |																						  |
-      |     ...      |   ...    |        ...         |    ...|      ...     |    ...    |   ...    |2013|
-      +--------------+----------+--------------------+-------+--------------+-----------+----------+----+
+      +--------------+----------+--------------+-------+--------------+-----------+----------+----+
+      |    reviewerid|      asin|  reviewername|overall|unixreviewtime| reviewtime|  date_col|year|
+      +--------------+----------+--------------+-------+--------------+-----------+----------+----+
+      |XXXXXXXXXXXXXX|xxxxxxxxxx|       XXXXXXX|      4|    0000000000| 02 1, 2013|2013-02-01|2013|
+      |yyyyyyyyyyyyyy|yyyyyyyyyy|       yyyyyyy|      4|    0000000000|03 30, 2013|2013-03-30|2013|
+      |zzzzzzzzzzzzzz|zzzzzzzzzz|       zzzzzzz|      4|    0000000000|05 12, 2013|2013-05-12|2013|
+      |																					|
+      |     ...      |   ...    |     ...      |    ...|      ...     |    ...    |   ...    |2013|
+      +--------------+----------+--------------+-------+--------------+-----------+----------+----+
       
       
       # Glacier Data 조회시 :
@@ -176,15 +176,15 @@ Glue Table : sample-table-name
       query3 = """SELECT * FROM `sample-db-name`.`sample-table-name` where year='1998'"""
       spark.sql(query3).show()
       
-      +--------------+----------+--------------------+-------+--------------+-----------+----------+----+
-      |    reviewerid|      asin|        reviewername|overall|unixreviewtime| reviewtime|  date_col|year|
-      +--------------+----------+--------------------+-------+--------------+-----------+----------+----+
-      |XXXXXXXXXXXXXX|xxxxxxxxxx|             XXXXXXX|      4|    0000000000| 02 1, 1998|1998-02-01|1998|
-      |yyyyyyyyyyyyyy|yyyyyyyyyy|             yyyyyyy|      4|    0000000000|03 30, 1998|1998-03-30|1998|
-      |zzzzzzzzzzzzzz|zzzzzzzzzz|             zzzzzzz|      4|    0000000000|05 12, 1998|1998-05-12|1998|
-      |																						  |
-      |     ...      |   ...    |        ...         |    ...|      ...     |    ...    |   ...    |1998|
-      +--------------+----------+--------------------+-------+--------------+-----------+----------+----+
+      +--------------+----------+--------------+-------+--------------+-----------+----------+----+
+      |    reviewerid|      asin|  reviewername|overall|unixreviewtime| reviewtime|  date_col|year|
+      +--------------+----------+--------------+-------+--------------+-----------+----------+----+
+      |XXXXXXXXXXXXXX|xxxxxxxxxx|       XXXXXXX|      4|    0000000000| 02 1, 1998|1998-02-01|1998|
+      |yyyyyyyyyyyyyy|yyyyyyyyyy|       yyyyyyy|      4|    0000000000|03 30, 1998|1998-03-30|1998|
+      |zzzzzzzzzzzzzz|zzzzzzzzzz|       zzzzzzz|      4|    0000000000|05 12, 1998|1998-05-12|1998|
+      |																					|
+      |     ...      |   ...    |     ...      |    ...|      ...     |    ...    |   ...    |1998|
+      +--------------+----------+--------------+-------+--------------+-----------+----------+----+
       ```
 
       
@@ -210,7 +210,7 @@ Glue Table : sample-table-name
               at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
       ...
       Caused by: java.io.IOException: com.amazon.ws.emr.hadoop.fs.shaded.com.amazonaws.services.s3.model.AmazonS3Exception: 
-          The operation is not valid for the object's storage class (Service: Amazon S3; Status Code: 403;
+          The operation is not valid for the object\'s storage class (Service: Amazon S3; Status Code: 403;
           Error Code: InvalidObjectState; Request ID: 2H5QW79SR7M40GC7;
           S3 Extended Request ID: FVpoWPsy5J6gAGVUNlc/SfpFfBC6Awn0Etnada0nOKU5uMXE1R4Hg25DaJATrDgg3kl7MbBOAc8=;
           Proxy: null), S3 Extended Request ID: FVpoWPsy5J6gAGVUNlc/SfpFfBC6Awn0Etnada0nOKU5uMXE1R4Hg25DaJATrDgg3kl7MbBOAc8=
@@ -224,15 +224,15 @@ Glue Table : sample-table-name
       # Standard Data 조회시 :
       spark.read.option("header",True).parquet("s3://sample-bucket-name/data/batch/rds/sample-table-name/year=1999/").show()
       
-      +--------------+----------+--------------------+-------+--------------+-----------+----------+----+
-      |    reviewerid|      asin|        reviewername|overall|unixreviewtime| reviewtime|  date_col|year|
-      +--------------+----------+--------------------+-------+--------------+-----------+----------+----+
-      |XXXXXXXXXXXXXX|xxxxxxxxxx|             XXXXXXX|      4|    0000000000| 02 1, 1998|1998-02-01|1998|
-      |yyyyyyyyyyyyyy|yyyyyyyyyy|             yyyyyyy|      4|    0000000000|03 30, 1998|1998-03-30|1998|
-      |zzzzzzzzzzzzzz|zzzzzzzzzz|             zzzzzzz|      4|    0000000000|05 12, 1998|1998-05-12|1998|
-      |																						  |
-      |     ...      |   ...    |        ...         |    ...|      ...     |    ...    |   ...    |1998|
-      +--------------+----------+--------------------+-------+--------------+-----------+----------+----+
+      +--------------+----------+--------------+-------+--------------+-----------+----------+----+
+      |    reviewerid|      asin|  reviewername|overall|unixreviewtime| reviewtime|  date_col|year|
+      +--------------+----------+--------------+-------+--------------+-----------+----------+----+
+      |XXXXXXXXXXXXXX|xxxxxxxxxx|       XXXXXXX|      4|    0000000000| 02 1, 1998|1998-02-01|1998|
+      |yyyyyyyyyyyyyy|yyyyyyyyyy|       yyyyyyy|      4|    0000000000|03 30, 1998|1998-03-30|1998|
+      |zzzzzzzzzzzzzz|zzzzzzzzzz|       zzzzzzz|      4|    0000000000|05 12, 1998|1998-05-12|1998|
+      |																					|
+      |     ...      |   ...    |     ...      |    ...|      ...     |    ...    |   ...    |1998|
+      +--------------+----------+--------------+-------+--------------+-----------+----------+----+
       ```
       
       
