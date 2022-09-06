@@ -31,14 +31,14 @@ layout: post
 
 ### Security Group
 
-Bastion Security Group
+**Bastion Security Group**
 
 | Type       | Protocol | Port  Range | Source          | Description             |
 | ---------- | -------- | ----------- | --------------- | ----------------------- |
 | Custom TCP | TCP      | **8157**    | {Current My IP} | From Bespin Forwarding  |
 | SSH        | TCP      | 22          | {Current My IP} | From Bespin  SSH Access |
 
-EMR Master Security Group
+**EMR Master Security Group**
 
 | Type            | Protocol | Port  range | Source                     | Description          |
 | --------------- | -------- | ----------- | -------------------------- | -------------------- |
