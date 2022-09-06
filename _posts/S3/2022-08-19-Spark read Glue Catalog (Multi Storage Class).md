@@ -196,7 +196,8 @@ Glue Table : sample-table-name
       spark.read.option("header",True).parquet("s3://sample-bucket-name/data/batch/rds/sample-table-name/").show()
       
       ================ ERROR ================
-      WARN TaskSetManager: Lost task 0.0 in stage 5.0 (TID 5) (ip-xx-x-xxx-xx.ap-northeast-2.compute.internal executor 1): org.apache.spark.SparkException: Exception thrown in awaitResult:
+      WARN TaskSetManager: Lost task 0.0 in stage 5.0 (TID 5) (ip-xx-x-xxx-xx.ap-northeast-2.compute.internal executor 1): 
+          org.apache.spark.SparkException: Exception thrown in awaitResult:
               at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:301)
               at org.apache.spark.util.ThreadUtils$.parmap(ThreadUtils.scala:375)
               at org.apache.spark.sql.execution.datasources.parquet.ParquetFileFormat$.readParquetFootersInParallel(ParquetFileFormat.scala:743)
@@ -206,7 +207,10 @@ Glue Table : sample-table-name
               at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
               at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
       ...
-      Caused by: java.io.IOException: com.amazon.ws.emr.hadoop.fs.shaded.com.amazonaws.services.s3.model.AmazonS3Exception: The operation is not valid for the object's storage class (Service: Amazon S3; Status Code: 403; Error Code: InvalidObjectState; Request ID: 2H5QW79SR7M40GC7; S3 Extended Request ID: FVpoWPsy5J6gAGVUNlc/SfpFfBC6Awn0Etnada0nOKU5uMXE1R4Hg25DaJATrDgg3kl7MbBOAc8=; Proxy: null), S3 Extended Request ID: FVpoWPsy5J6gAGVUNlc/SfpFfBC6Awn0Etnada0nOKU5uMXE1R4Hg25DaJATrDgg3kl7MbBOAc8=
+      Caused by: java.io.IOException: com.amazon.ws.emr.hadoop.fs.shaded.com.amazonaws.services.s3.model.AmazonS3Exception: 
+          The operation is not valid for the object's storage class (Service: Amazon S3; Status Code: 403; Error Code: InvalidObjectState; Request ID: 2H5QW79SR7M40GC7;
+          S3 Extended Request ID: FVpoWPsy5J6gAGVUNlc/SfpFfBC6Awn0Etnada0nOKU5uMXE1R4Hg25DaJATrDgg3kl7MbBOAc8=;
+          Proxy: null), S3 Extended Request ID: FVpoWPsy5J6gAGVUNlc/SfpFfBC6Awn0Etnada0nOKU5uMXE1R4Hg25DaJATrDgg3kl7MbBOAc8=
               at com.amazon.ws.emr.hadoop.fs.s3.S3FSInputStream.open(S3FSInputStream.java:226)
               at com.amazon.ws.emr.hadoop.fs.s3.S3FSInputStream.retrieveInputStreamWithInfo(S3FSInputStream.java:391)
               at com.amazon.ws.emr.hadoop.fs.s3.S3FSInputStream.reopenStream(S3FSInputStream.java:378)
@@ -227,5 +231,5 @@ Glue Table : sample-table-name
       |     ...      |   ...    |        ...         |    ...|      ...     |    ...    |   ...    |1998|
       +--------------+----------+--------------------+-------+--------------+-----------+----------+----+
       ```
-
+      
       
