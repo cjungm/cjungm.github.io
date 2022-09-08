@@ -340,10 +340,15 @@ footer {
 }
 
 table {
-    display: table;
-    border-collapse: separate;
-    box-sizing: border-box;
-    text-indent: initial;
-    border-spacing: 2px;
+    border-collapse: collapse;
     border-color: black;
+}
+
+td {
+    border: 1px solid black;
+	padding: 10px;
+}
+
+th {
+    border: 1px solid black;
 }
