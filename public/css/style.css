@@ -340,12 +340,10 @@ footer {
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0px;
-    /* width: auto; */
-    overflow: auto;
-    break-inside: auto;
-    text-align: left;
-	border-width: thin;
-	border-color: #111;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: black;
 }
