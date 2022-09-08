@@ -346,4 +346,5 @@ table {
     overflow: auto;
     break-inside: auto;
     text-align: left;
+	border-width: thin;
 }
