@@ -342,9 +342,10 @@ footer {
 table {
     border-collapse: collapse;
     border-spacing: 0px;
-    width: 100%;
+    width: auto;
     overflow: auto;
     break-inside: auto;
     text-align: left;
 	border-width: thin;
+	border-color: #111;
 }
