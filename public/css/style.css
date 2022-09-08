@@ -51,6 +51,7 @@ body {
 	padding: 0;
 	font-family: serif, 'Gelasio', 'Nanum Myeongjo';
 	color: #2c3e50;
+	tab-size: 4;
 }
 
 a {
