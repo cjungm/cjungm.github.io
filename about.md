@@ -26,7 +26,13 @@ Architecture 구성 및 AWS Service 활용 Data 처리 기능 개발을 생활�
 
 
 
-## 자격증
+## Git Commit Graph
+
+<img src="https://ghchart.rshah.org/219138/cjungm"/>
+
+
+
+## Certification
 
 | Certification                                                | Badge                                                        |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
