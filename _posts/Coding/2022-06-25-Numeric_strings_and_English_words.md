@@ -106,6 +106,16 @@ def solution(s):
     return int(s)
 ```
 
+> 각 숫자에 대한 Dictionary를 사전에 정의하고 주어진 문자열에서 Dictionary에 일치하는 문자열을 숫자로 바꾸는 작업을 합니다.
+>
+> 해당 작업은 Loop를 통해 진행되는 데 문자열을 Loop 돌며 문자열을 숫자로 바꾸는 것보다
+>
+> Dictionary를 Loop 도는 것이 효율적입니다.
+>
+> 문자열의 길이는 최대 50이지만 Dictionary는 최대 10 입니다.
+>
+> replace를 통해 중복 문자열에 대해서도 모두 변환 가능합니다.
+
 모범 답안 : 
 
 ```python
